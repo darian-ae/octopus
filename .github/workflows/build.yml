@@ -1,0 +1,7 @@
+on: push
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm install
+      - run: node lib/app.js
