@@ -3,6 +3,9 @@ jobs:
   check-links:
     runs-on: ubuntu-latest
     container: node:16
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
       - uses: actions/checkout@v3
       - run: npm install
