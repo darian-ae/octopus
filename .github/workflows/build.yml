@@ -1,4 +1,8 @@
-on: push
+on:
+    schedule:
+      # minute, hour, day of month, month, day of week
+      # this runs every day at 1PM UTC, 9PM EST
+    - cron:  '0 15 * * *'
 jobs:
   check-links:
     runs-on: ubuntu-latest
