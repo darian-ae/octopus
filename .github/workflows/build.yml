@@ -1,16 +1,16 @@
-on:
-    schedule:
-      # minute, hour, day of month, month, day of week
-      # this runs every day at 1PM UTC, 9PM EST
-    - cron:  '3 15 * * *'
-jobs:
-  check-links:
-    runs-on: ubuntu-latest
-    container: node:16
-    env:
-      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      BASE_URL: ${{ secrets.BASE_URL }}
-    steps:
-      - uses: actions/checkout@v3
-      - run: npm install
-      - run: node lib/app.js
+# on:
+#     schedule:
+#       # minute, hour, day of month, month, day of week
+#       # this runs every day at 1PM UTC, 9PM EST
+#     - cron:  '3 15 * * *'
+# jobs:
+#   check-links:
+#     runs-on: ubuntu-latest
+#     container: node:16
+#     env:
+#       DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+#       BASE_URL: ${{ secrets.BASE_URL }}
+#     steps:
+#       - uses: actions/checkout@v3
+#       - run: npm install
+#       - run: node lib/app.js
